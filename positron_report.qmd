@@ -1,0 +1,205 @@
+---
+title: "W07-Reflection Essay-Introduction to Positro"
+author: "Angelina"
+date: today
+format:
+  html:
+    theme: darkly
+    toc: true
+    toc-depth: 4
+    toc-expand: 3
+    toc-title: "Table of Contents"
+    number-sections: false
+    self-contained: true
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    highlight-style: dracula
+    smooth-scroll: true
+    css: styles.css
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# 1. Prepare Your Report {#sec-prepare}
+
+> When you prepare the Quarto report, implement as many features and effects of the HTML format as you can, including, but not limited to, the following:
+
+-   Text formatting
+-   Headings
+-   Lists
+-   Blockquote
+-   Panel Tabset or Tables
+-   Cross-referencing
+-   Footnote
+-   Callout blocks
+-   Table of Contents
+-   toc-depth / toc-expand
+-   Section Numbering
+-   Self-contained
+-   HTML theme options
+-   Hiding code
+-   Code overflow
+-   Code tools
+
+
+::: callout-note
+## What is Positron?
+Positron is an open-source IDE built by Posit. It supports both R and Python and includes modern developer tooling like built-in AI assistants and a customizable layout.
+:::
+
+
+# 2. Essay Responses {#sec-essay}
+
+## 2.1. Download and Install Positron. As you watch the videos in Step 1 and Step 3, follow the activities in the video and be familiar with Positron. {#sec-install}
+
+I successfully downloaded and installed Positron following the instructions from the link of the beginning of the module. 
+
+## 2.2. Based on what you learned from Step 1 and Step 3, what do you like about Positron compared with RStudio?
+
+::: {.panel-tabset}
+
+### Step 1: Observations
+
+What I liked from Step 1:
+
+- **Git integration** is significantly easier in Positron than RStudio. The left sidebar has a dedicated Git panel that makes committing, pushing, and branching much more intuitive.
+- **Built-in AI assistant**: RStudio does not have this. Being able to ask questions about my code *inside* the IDE without switching to a browser is a time-saver.
+- The AI understands my **actual workspace**: it can see my variables and data, making suggestions much more relevant than a generic chatbot.
+
+###  Step 3: Observations
+
+What I liked from Step 3:
+
+- **Customizable layouts**: RStudio's layout is fairly rigid. Positron lets you drag and rearrange panels however you want, which makes the workspace feel more personal and efficient.
+- **Modern GUI**: Positron looks and feels more like a contemporary developer tool compared to RStudio's older aesthetic.
+- **R + Python support**: If I ever want to explore Python, I can do it in the same IDE without switching tools.
+
+:::
+
+### Side-by-Side Feature Comparison {#sec-table}
+
+| Feature | RStudio | Positron |
+|---|---|---|
+| AI Assistant | ☒ | ☑ Built-in |
+| Python Support | Limited | ☑ Full |
+| Git Panel | Basic | ☑ Advanced |
+| Layout Customization | ☒ Fixed | ☑ Flexible |
+| Built on VS Code | ☒ | ☑ |
+| Open Source | ☑ | ☑ |
+| Databot Extension | ☒ | ☑ |
+
+: Comparison of RStudio and Positron features {#tbl-comparison}
+
+See @tbl-comparison for a full feature breakdown between the two IDEs.
+
+
+## 2.3. In Step 4, the video demonstrates how you can use AI. {#sec-ai}
+
+### 2.3.1. Overview of AI Tools {#sec-ai-overview}
+
+Positron offers several ways to use AI, ranging from free to paid options depending on the provider you connect.[^1]
+
+[^1]: Costs vary based on API usage. Free-tier API keys from some providers may work for light use.
+
+::: {.panel-tabset}
+
+### Positron Assistant
+
+The Positron Assistant is a built-in AI client integrated directly into the IDE. It has access to my full workplace like active scripts, variables in memory, and console errors.
+
+**Key features:**
+
+1. **Sidebar Chat**: A dedicated chat interface for asking questions, debugging code, or generating new snippets from scratch.
+2. **Inline Edits**: Press `Cmd+I` to open a prompt *directly inside the code editor* to modify existing code (e.g., *"Make this plot red"* or *"Label the outliers"*).
+3. **Model Agnostic**: Supports multiple AI providers:
+   - Anthropic (Claude) ☑
+   - AWS Bedrock ☑
+   - Google Gemini ☑
+   - GitHub Copilot ☑
+
+::: callout-important
+## Cost
+ Positron IDE is free and open-source. But you need your own API key to power the AI (in the settings) and most providers charge based on usage.
+:::
+
+### Databot Extension
+
+Databot is a extension designed specifically for fast exploratory data analysis. It operates more autonomously than the built-in assistant.
+
+**Key capabilities:**
+
+- **Autonomous EDA**: You can give complex instructions like *"Combine these five CSVs and find the correlation between GDP and happiness"* and Databot writes and runs the code.
+- **The SWEAR Loop**: Databot follows a cycle of writing → executing → analyzing → regrouping until the task is complete.
+- **Auditability**: Every action is code-based. You can review, approve, or reject code before it runs.
+:::
+
+---
+
+### 2.3.2. Which AI tools have you installed or set up? Which AI tools did you find beneficial for you? {#sec-ai-setup}
+
+I have set up the Positron Assistant connected to my Anthropic (Claude) API key.
+
+::: callout-tip
+## Why I find it beneficial
+Instead of copying and pasting error messages into a separate browser, I can get help directly inside my script. The assistant understands everything, like my variable names, my data structure, my actual errors.
+:::
+
+**Specific ways that I can use it:**
+
+- Fixing errors instantly by showing it my console output
+- Writing new plot code without leaving the IDE
+- Asking "what does this function do?" without Googling or going to Quarto guide. 
+
+
+### 2.4. I strongly recommend using GitHub Copilot, which is free if you apply for an education account {#sec-copilot}
+
+#### 2.4.1. Apply for it and take a screenshot showing you were accepted into the education program {#sec-copilot-apply}
+
+I applied for the GitHub Education.
+
+![GitHub Education Acceptance Screenshot](images/github.png){#fig-github fig-alt="Screenshot showing GitHub Education program acceptance"}
+
+See @fig-github for the acceptance confirmation screenshot.
+
+#### 2.4.2. Play with it and do you find it helpful or distracting? Please elaborate
+ {#sec-copilot-experience}
+
+::: {.panel-tabset}
+
+### Helpful Aspects
+
+GitHub Copilot feels like having a tutor sitting next to me. Specific things I found helpful:
+
+- It explains my mistakes *as I make them*, not just after I ask.
+- Auto-completing repetitive code patterns saves a lot of typing.
+- The inline suggestions mean I spend less time context-switching between coding and searching.
+
+ Distracting Aspects
+
+It can be overwhelming at first:
+
+- There are so many apps and offers in the GitHub Education pack that I don't understand yet
+- Sometimes I spend more time exploring the free tools than actually coding.
+- The suggestions occasionally interrupt my thought process when I already know what I want to write.
+
+:::
+
+::: callout-warning
+## Balance is Key
+Like any tool, Copilot works best when you already have some coding knowledge. But I think if I rely on it too heavily early on can slow down me learning the fundamentals.
+:::
+
+# 3. Publish this report to GitHub Pages and provide a URL to the GitHub Pages for the report. Note that although both GitHub Pages and GitHub repo are online, they are different. GitHub Pages is a website publishing service that hosts the rendered HTML from a QMD file. {#sec-publish}
+
+This report has been published to GitHub Pages. The rendered HTML is hosted at:
+
+> 🔗 **[Insert your GitHub Pages URL here]**
+
+::: callout-note
+## GitHub Pages vs. GitHub Repo
+A GitHub Repository stores your raw files (like `.qmd`, `.R`, images).
+A GitHub Pages site hosts the *rendered HTML output* as a live, public website — they are two different things even though both live on GitHub.
+:::
