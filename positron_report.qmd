@@ -196,7 +196,7 @@ Like any tool, Copilot works best when you already have some coding knowledge. B
 
 This report has been published to GitHub Pages. The rendered HTML is hosted at:
 
-> 🔗 **[Insert your GitHub Pages URL here]**
+github.com/angelinagjao/positron-report
 
 ::: callout-note
 ## GitHub Pages vs. GitHub Repo
